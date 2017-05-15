@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/BlurImage.dir/BlurImage.cpp.o"
-  "BlurImage.pdb"
-  "BlurImage"
+  "CMakeFiles/blurimage.dir/blurimage.cpp.o"
+  "blurimage.pdb"
+  "blurimage"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/BlurImage.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/blurimage.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

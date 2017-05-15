@@ -1,3 +1,3 @@
-/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles/rebuild_cache.dir
-/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles/edit_cache.dir
-/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles/BlurImage.dir
+/Users/alexvallorosi/Desktop/proj2/CMakeFiles/rebuild_cache.dir
+/Users/alexvallorosi/Desktop/proj2/CMakeFiles/edit_cache.dir
+/Users/alexvallorosi/Desktop/proj2/CMakeFiles/blurimage.dir

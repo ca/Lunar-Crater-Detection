@@ -9,66 +9,81 @@
 using namespace std;
 using namespace cv;
 
-
 int main(int argc, char** argv) {
     // using namespace cv;
-
 
     printf("%s\n", argv[1]);
     Mat src=imread(argv[1]);
     
-    int cannyh = atoi(argv[2]);
-    int minvotes = atoi(argv[3]);
+    // int cannyh = atoi(argv[2]);
+    // int minvotes = atoi(argv[3]);
 
     if (!src.data) {
         std::cout << "ERROR:\topening image" <<std::endl;
         return -1;
     }
-    namedWindow("image",CV_WINDOW_AUTOSIZE);
-    imshow("image",src);
 
+    // converts the image to hsv so that circle detection is more accurate
     Mat hsv_image;
     cvtColor(src, hsv_image, COLOR_BGR2HSV);
+    // high contrast black and white
     Mat imgThreshold;
-    inRange(hsv_image, Scalar(0, 0, 0, 0), Scalar(180, 255, 100, 0), imgThreshold);
+    inRange(hsv_image,
+        Scalar(0, 0, 0),
+        Scalar(48, 207, 74),
+        imgThreshold);
+    // Scalar(28, 50, 100, 0) - Okay for M2
+    // Scalar(7, 216, 213, 0)
 
+    // Scalar(118, 186, 137, 0) - MOON 5
+
+    // Scalar(40, 60, 110, 0)
+    // Scalar(30, 80, 100, 0) - MOON 2
+    // Scalar(210, 250, 220, 0)
+    // 50 50 170
+    // 100 119 36
+
+    // Applies a gaussian blur to the image
     GaussianBlur( imgThreshold, imgThreshold, Size(9, 9), 2, 2 );
-    vector<Vec3f> circles;
-    HoughCircles(imgThreshold, circles, CV_HOUGH_GRADIENT, 2, imgThreshold.rows/8, 100, 20, 0, 0);
-
+    // fastNlMeansDenoisingColored(imgThreshold, imgThreshold, 10, 10, 7, 21);
     
-    // Mat src_gray2;
-    // cvtColor(src, src_gray2, CV_BGR2GRAY );
-
-    // GaussianBlur( src_gray2, src_gray2, Size(9, 9), 2, 2 );
-
-    // vector<Vec3f> circles;
-
-    // HoughCircles(src_gray2, circles, CV_HOUGH_GRADIENT,
-    //       2,   // accumulator resolution (size of the image / 2)
-    //       5,  // minimum distance between two circles
-    //       cannyh, // Canny high threshold
-    //       minvotes, // minimum number of votes
-    //       0, 60); // min and max radius
+    vector<Vec3f> circles;
+    // applies a hough transform to the image
+    HoughCircles(imgThreshold, circles, CV_HOUGH_GRADIENT,
+        2, // accumulator resolution (size of image / 2)
+        100, //minimum dist between two circles
+        500, // Canny high threshold
+        80, // minimum number of votes
+        10, 65); // min and max radius
 
     cout << circles.size() << endl;
     cout << "end of test" << endl;
 
-       vector<Vec3f>::
-              const_iterator itc= circles.begin();
+    vector<Vec3f>::
+          const_iterator itc = circles.begin();
+    // Draws the circles on the source image
+    while (itc!=circles.end()) {
 
-       while (itc!=circles.end()) {
-
-         circle(imgThreshold, // src_gray2
-            Point((*itc)[0], (*itc)[1]), // circle centre
+        circle(src, // src_gray2
+            Point((*itc)[0], (*itc)[1]), // circle center
             (*itc)[2],       // circle radius
-            Scalar(255), // color
-            2);              // thickness
+            Scalar(0,0,255), // color
+            5);              // thickness
 
-         ++itc;
-       }
-        namedWindow("image",CV_WINDOW_AUTOSIZE);
-        imshow("image",imgThreshold); // src_gray2
-        waitKey(0);
+        ++itc;
+    }
+    namedWindow("Threshold",CV_WINDOW_AUTOSIZE);
+    resize(imgThreshold, imgThreshold, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
+    imshow("Threshold",imgThreshold); // displays the source iamge
+
+    namedWindow("HSV Color Space",CV_WINDOW_AUTOSIZE);
+    resize(hsv_image, hsv_image, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
+    imshow("HSV Color Space",hsv_image); // displays the source iamge
+    
+    namedWindow("Source Image",CV_WINDOW_AUTOSIZE);
+    resize(src, src, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
+    imshow("Source Image",src); // displays the source iamge
+    
+    waitKey(0);
     return 0;
 }

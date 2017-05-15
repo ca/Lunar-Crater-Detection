@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/alexvallorosi/Desktop/untitled folder/BlurImage.cpp
+/Users/alexvallorosi/Desktop/proj2/blurimage.cpp
 cstdio
 -
 iostream
 -
 opencv2/core/core.hpp
-/Users/alexvallorosi/Desktop/untitled folder/opencv2/core/core.hpp
+/Users/alexvallorosi/Desktop/proj2/opencv2/core/core.hpp
 opencv2/highgui/highgui.hpp
-/Users/alexvallorosi/Desktop/untitled folder/opencv2/highgui/highgui.hpp
+/Users/alexvallorosi/Desktop/proj2/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/Users/alexvallorosi/Desktop/untitled folder/opencv2/imgproc/imgproc.hpp
+/Users/alexvallorosi/Desktop/proj2/opencv2/imgproc/imgproc.hpp
 opencv2/features2d/features2d.hpp
-/Users/alexvallorosi/Desktop/untitled folder/opencv2/features2d/features2d.hpp
+/Users/alexvallorosi/Desktop/proj2/opencv2/features2d/features2d.hpp
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

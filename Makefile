@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.8.0/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/3.8.0/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/alexvallorosi/Desktop/untitled folder"
+CMAKE_SOURCE_DIR = /Users/alexvallorosi/Desktop/proj2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/alexvallorosi/Desktop/untitled folder"
+CMAKE_BINARY_DIR = /Users/alexvallorosi/Desktop/proj2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/Users/alexvallorosi/Desktop/untitled folder"
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CMake.app/Contents/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.8.0/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles" "/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexvallorosi/Desktop/proj2/CMakeFiles /Users/alexvallorosi/Desktop/proj2/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexvallorosi/Desktop/proj2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BlurImage
+# Target rules for targets named blurimage
 
 # Build rule for target.
-BlurImage: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BlurImage
-.PHONY : BlurImage
+blurimage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blurimage
+.PHONY : blurimage
 
 # fast build rule for target.
-BlurImage/fast:
-	$(MAKE) -f CMakeFiles/BlurImage.dir/build.make CMakeFiles/BlurImage.dir/build
-.PHONY : BlurImage/fast
+blurimage/fast:
+	$(MAKE) -f CMakeFiles/blurimage.dir/build.make CMakeFiles/blurimage.dir/build
+.PHONY : blurimage/fast
 
-BlurImage.o: BlurImage.cpp.o
+blurimage.o: blurimage.cpp.o
 
-.PHONY : BlurImage.o
+.PHONY : blurimage.o
 
 # target to build an object file
-BlurImage.cpp.o:
-	$(MAKE) -f CMakeFiles/BlurImage.dir/build.make CMakeFiles/BlurImage.dir/BlurImage.cpp.o
-.PHONY : BlurImage.cpp.o
+blurimage.cpp.o:
+	$(MAKE) -f CMakeFiles/blurimage.dir/build.make CMakeFiles/blurimage.dir/blurimage.cpp.o
+.PHONY : blurimage.cpp.o
 
-BlurImage.i: BlurImage.cpp.i
+blurimage.i: blurimage.cpp.i
 
-.PHONY : BlurImage.i
+.PHONY : blurimage.i
 
 # target to preprocess a source file
-BlurImage.cpp.i:
-	$(MAKE) -f CMakeFiles/BlurImage.dir/build.make CMakeFiles/BlurImage.dir/BlurImage.cpp.i
-.PHONY : BlurImage.cpp.i
+blurimage.cpp.i:
+	$(MAKE) -f CMakeFiles/blurimage.dir/build.make CMakeFiles/blurimage.dir/blurimage.cpp.i
+.PHONY : blurimage.cpp.i
 
-BlurImage.s: BlurImage.cpp.s
+blurimage.s: blurimage.cpp.s
 
-.PHONY : BlurImage.s
+.PHONY : blurimage.s
 
 # target to generate assembly for a file
-BlurImage.cpp.s:
-	$(MAKE) -f CMakeFiles/BlurImage.dir/build.make CMakeFiles/BlurImage.dir/BlurImage.cpp.s
-.PHONY : BlurImage.cpp.s
+blurimage.cpp.s:
+	$(MAKE) -f CMakeFiles/blurimage.dir/build.make CMakeFiles/blurimage.dir/blurimage.cpp.s
+.PHONY : blurimage.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... BlurImage"
-	@echo "... BlurImage.o"
-	@echo "... BlurImage.i"
-	@echo "... BlurImage.s"
+	@echo "... blurimage"
+	@echo "... blurimage.o"
+	@echo "... blurimage.i"
+	@echo "... blurimage.s"
 .PHONY : help
 
 

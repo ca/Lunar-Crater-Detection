@@ -34,96 +34,96 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CMake.app/Contents/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.8.0/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/3.8.0/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/alexvallorosi/Desktop/untitled folder"
+CMAKE_SOURCE_DIR = /Users/alexvallorosi/Desktop/proj2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/alexvallorosi/Desktop/untitled folder"
+CMAKE_BINARY_DIR = /Users/alexvallorosi/Desktop/proj2
 
 # Include any dependencies generated for this target.
-include CMakeFiles/BlurImage.dir/depend.make
+include CMakeFiles/blurimage.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/BlurImage.dir/progress.make
+include CMakeFiles/blurimage.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/BlurImage.dir/flags.make
+include CMakeFiles/blurimage.dir/flags.make
 
-CMakeFiles/BlurImage.dir/BlurImage.cpp.o: CMakeFiles/BlurImage.dir/flags.make
-CMakeFiles/BlurImage.dir/BlurImage.cpp.o: BlurImage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BlurImage.dir/BlurImage.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BlurImage.dir/BlurImage.cpp.o -c "/Users/alexvallorosi/Desktop/untitled folder/BlurImage.cpp"
+CMakeFiles/blurimage.dir/blurimage.cpp.o: CMakeFiles/blurimage.dir/flags.make
+CMakeFiles/blurimage.dir/blurimage.cpp.o: blurimage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexvallorosi/Desktop/proj2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/blurimage.dir/blurimage.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/blurimage.dir/blurimage.cpp.o -c /Users/alexvallorosi/Desktop/proj2/blurimage.cpp
 
-CMakeFiles/BlurImage.dir/BlurImage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BlurImage.dir/BlurImage.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/alexvallorosi/Desktop/untitled folder/BlurImage.cpp" > CMakeFiles/BlurImage.dir/BlurImage.cpp.i
+CMakeFiles/blurimage.dir/blurimage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/blurimage.dir/blurimage.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexvallorosi/Desktop/proj2/blurimage.cpp > CMakeFiles/blurimage.dir/blurimage.cpp.i
 
-CMakeFiles/BlurImage.dir/BlurImage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BlurImage.dir/BlurImage.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/alexvallorosi/Desktop/untitled folder/BlurImage.cpp" -o CMakeFiles/BlurImage.dir/BlurImage.cpp.s
+CMakeFiles/blurimage.dir/blurimage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/blurimage.dir/blurimage.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexvallorosi/Desktop/proj2/blurimage.cpp -o CMakeFiles/blurimage.dir/blurimage.cpp.s
 
-CMakeFiles/BlurImage.dir/BlurImage.cpp.o.requires:
+CMakeFiles/blurimage.dir/blurimage.cpp.o.requires:
 
-.PHONY : CMakeFiles/BlurImage.dir/BlurImage.cpp.o.requires
+.PHONY : CMakeFiles/blurimage.dir/blurimage.cpp.o.requires
 
-CMakeFiles/BlurImage.dir/BlurImage.cpp.o.provides: CMakeFiles/BlurImage.dir/BlurImage.cpp.o.requires
-	$(MAKE) -f CMakeFiles/BlurImage.dir/build.make CMakeFiles/BlurImage.dir/BlurImage.cpp.o.provides.build
-.PHONY : CMakeFiles/BlurImage.dir/BlurImage.cpp.o.provides
+CMakeFiles/blurimage.dir/blurimage.cpp.o.provides: CMakeFiles/blurimage.dir/blurimage.cpp.o.requires
+	$(MAKE) -f CMakeFiles/blurimage.dir/build.make CMakeFiles/blurimage.dir/blurimage.cpp.o.provides.build
+.PHONY : CMakeFiles/blurimage.dir/blurimage.cpp.o.provides
 
-CMakeFiles/BlurImage.dir/BlurImage.cpp.o.provides.build: CMakeFiles/BlurImage.dir/BlurImage.cpp.o
+CMakeFiles/blurimage.dir/blurimage.cpp.o.provides.build: CMakeFiles/blurimage.dir/blurimage.cpp.o
 
 
-# Object files for target BlurImage
-BlurImage_OBJECTS = \
-"CMakeFiles/BlurImage.dir/BlurImage.cpp.o"
+# Object files for target blurimage
+blurimage_OBJECTS = \
+"CMakeFiles/blurimage.dir/blurimage.cpp.o"
 
-# External object files for target BlurImage
-BlurImage_EXTERNAL_OBJECTS =
+# External object files for target blurimage
+blurimage_EXTERNAL_OBJECTS =
 
-BlurImage: CMakeFiles/BlurImage.dir/BlurImage.cpp.o
-BlurImage: CMakeFiles/BlurImage.dir/build.make
-BlurImage: /usr/local/lib/libopencv_shape.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_stitching.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_superres.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_videostab.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_objdetect.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_calib3d.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_features2d.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_flann.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_highgui.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_ml.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_photo.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_video.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_videoio.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_imgcodecs.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_imgproc.3.2.0.dylib
-BlurImage: /usr/local/lib/libopencv_core.3.2.0.dylib
-BlurImage: CMakeFiles/BlurImage.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable BlurImage"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BlurImage.dir/link.txt --verbose=$(VERBOSE)
+blurimage: CMakeFiles/blurimage.dir/blurimage.cpp.o
+blurimage: CMakeFiles/blurimage.dir/build.make
+blurimage: /usr/local/lib/libopencv_shape.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_stitching.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_superres.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_videostab.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_objdetect.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_calib3d.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_features2d.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_flann.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_highgui.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_ml.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_photo.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_video.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_videoio.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_imgcodecs.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_imgproc.3.2.0.dylib
+blurimage: /usr/local/lib/libopencv_core.3.2.0.dylib
+blurimage: CMakeFiles/blurimage.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alexvallorosi/Desktop/proj2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable blurimage"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/blurimage.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/BlurImage.dir/build: BlurImage
+CMakeFiles/blurimage.dir/build: blurimage
 
-.PHONY : CMakeFiles/BlurImage.dir/build
+.PHONY : CMakeFiles/blurimage.dir/build
 
-CMakeFiles/BlurImage.dir/requires: CMakeFiles/BlurImage.dir/BlurImage.cpp.o.requires
+CMakeFiles/blurimage.dir/requires: CMakeFiles/blurimage.dir/blurimage.cpp.o.requires
 
-.PHONY : CMakeFiles/BlurImage.dir/requires
+.PHONY : CMakeFiles/blurimage.dir/requires
 
-CMakeFiles/BlurImage.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/BlurImage.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/BlurImage.dir/clean
+CMakeFiles/blurimage.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/blurimage.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/blurimage.dir/clean
 
-CMakeFiles/BlurImage.dir/depend:
-	cd "/Users/alexvallorosi/Desktop/untitled folder" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/alexvallorosi/Desktop/untitled folder" "/Users/alexvallorosi/Desktop/untitled folder" "/Users/alexvallorosi/Desktop/untitled folder" "/Users/alexvallorosi/Desktop/untitled folder" "/Users/alexvallorosi/Desktop/untitled folder/CMakeFiles/BlurImage.dir/DependInfo.cmake" --color=$(COLOR)
-.PHONY : CMakeFiles/BlurImage.dir/depend
+CMakeFiles/blurimage.dir/depend:
+	cd /Users/alexvallorosi/Desktop/proj2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alexvallorosi/Desktop/proj2 /Users/alexvallorosi/Desktop/proj2 /Users/alexvallorosi/Desktop/proj2 /Users/alexvallorosi/Desktop/proj2 /Users/alexvallorosi/Desktop/proj2/CMakeFiles/blurimage.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/blurimage.dir/depend
 
