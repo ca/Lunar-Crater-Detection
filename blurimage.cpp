@@ -61,17 +61,21 @@ int main(int argc, char** argv) {
 
     vector<Vec3f>::
           const_iterator itc = circles.begin();
+    int avgRadius = 0;
+    int i = 0;
     // Draws the circles on the source image
     while (itc!=circles.end()) {
-
+        i++;
         circle(src, // src_gray2
             Point((*itc)[0], (*itc)[1]), // circle center
             (*itc)[2],       // circle radius
             Scalar(0,0,255), // color
             5);              // thickness
-
+        avgRadius += (*itc)[2];
         ++itc;
     }
+    avgRadius = avgRadius/i;
+    cout << avgRadius << endl;
     namedWindow("Threshold",CV_WINDOW_AUTOSIZE);
     resize(imgThreshold, imgThreshold, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
     imshow("Threshold",imgThreshold); // displays the source iamge
