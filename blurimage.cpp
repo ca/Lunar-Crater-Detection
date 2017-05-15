@@ -52,8 +52,8 @@ int main(int argc, char** argv) {
     HoughCircles(imgThreshold, circles, CV_HOUGH_GRADIENT,
         2, // accumulator resolution (size of image / 2)
         100, //minimum dist between two circles
-        500, // Canny high threshold
-        80, // minimum number of votes
+        400, // Canny high threshold
+        10, // minimum number of votes
         10, 65); // min and max radius
 
     cout << circles.size() << endl;
