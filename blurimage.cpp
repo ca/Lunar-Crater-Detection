@@ -11,6 +11,8 @@ using namespace cv;
 
 int main(int argc, char** argv) {
 
+    int modifier = atoi(argv[2]);
+
     printf("%s\n", argv[1]);
     Mat src=imread(argv[1]);
 
@@ -63,15 +65,15 @@ int main(int argc, char** argv) {
     avgRadius = avgRadius/i;
     cout << avgRadius << endl;
     namedWindow("Threshold",CV_WINDOW_AUTOSIZE);
-    resize(imgThreshold, imgThreshold, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
+    resize(imgThreshold, imgThreshold, Size(src.cols/modifier,src.rows/modifier) ); // resizes it so it fits on our screen
     imshow("Threshold",imgThreshold); // displays the source iamge
 
     namedWindow("HSV Color Space",CV_WINDOW_AUTOSIZE);
-    resize(hsv_image, hsv_image, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
+    resize(hsv_image, hsv_image, Size(src.cols/modifier,src.rows/modifier) ); // resizes it so it fits on our screen
     imshow("HSV Color Space",hsv_image); // displays the source iamge
     
     namedWindow("Source Image",CV_WINDOW_AUTOSIZE);
-    resize(src, src, Size(src.cols/2,src.rows/2) ); // resizes it so it fits on our screen
+    resize(src, src, Size(src.cols/modifier,src.rows/modifier) ); // resizes it so it fits on our screen
     imshow("Source Image",src); // displays the source iamge
     
     waitKey(0);
