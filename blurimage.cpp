@@ -10,13 +10,9 @@ using namespace std;
 using namespace cv;
 
 int main(int argc, char** argv) {
-    // using namespace cv;
 
     printf("%s\n", argv[1]);
     Mat src=imread(argv[1]);
-    
-    // int cannyh = atoi(argv[2]);
-    // int minvotes = atoi(argv[3]);
 
     if (!src.data) {
         std::cout << "ERROR:\topening image" <<std::endl;
@@ -32,16 +28,6 @@ int main(int argc, char** argv) {
         Scalar(0, 0, 0),
         Scalar(48, 207, 74),
         imgThreshold);
-    // Scalar(28, 50, 100, 0) - Okay for M2
-    // Scalar(7, 216, 213, 0)
-
-    // Scalar(118, 186, 137, 0) - MOON 5
-
-    // Scalar(40, 60, 110, 0)
-    // Scalar(30, 80, 100, 0) - MOON 2
-    // Scalar(210, 250, 220, 0)
-    // 50 50 170
-    // 100 119 36
 
     // Applies a gaussian blur to the image
     GaussianBlur( imgThreshold, imgThreshold, Size(9, 9), 2, 2 );
